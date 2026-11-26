@@ -1,17 +1,23 @@
 {
   "expo": {
-    "name": "lameness_detection_app",
-    "slug": "lameness_detection_app",
+    "name": "HerdSight",
+    "slug": "herdsight-lameness",
+    "scheme": "herdsight",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "HerdSight records cattle walk-throughs to analyse gait and lameness.",
+        "NSMicrophoneUsageDescription": "HerdSight records audio alongside walk-through clips.",
+        "NSPhotoLibraryUsageDescription": "HerdSight attaches existing walk-through clips for gait analysis."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#04231A",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -19,7 +25,23 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "HerdSight attaches existing walk-through clips for gait analysis.",
+          "cameraPermission": "HerdSight records cattle walk-throughs to analyse gait and lameness.",
+          "microphonePermission": "HerdSight records audio alongside walk-through clips."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }

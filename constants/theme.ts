@@ -1,0 +1,38 @@
+/** Shared design tokens for inline styles, SVG fills and icon colours. */
+export const COLORS = {
+  canvas: '#F4F6F2',
+  surface: '#FFFFFF',
+  line: '#DFE6E0',
+  ink: '#0F1F1A',
+  inkMuted: '#56655F',
+  inkFaint: '#84938D',
+  forest: {
+    50: '#EDF7F1',
+    100: '#D7EDE0',
+    200: '#B0DCC2',
+    300: '#7FC49E',
+    400: '#4BA678',
+    500: '#24875A',
+    600: '#146B45',
+    700: '#0F5136',
+    800: '#0A3D2A',
+    900: '#06301F',
+    950: '#04231A',
+  },
+  amber: {
+    100: '#FEF3C7',
+    200: '#FDE68A',
+    300: '#FCD34D',
+    400: '#F59E0B',
+    500: '#D97706',
+    600: '#B45309',
+    700: '#92400E',
+  },
+  crimson: {
+    100: '#FEE2E2',
+    200: '#FECACA',
+    500: '#DC2626',
+    600: '#BE123C',
+    700: '#9F1239',
+  },
+} as const;

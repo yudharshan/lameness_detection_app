@@ -39,3 +39,25 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Python & ML artifacts
+backend/.venv/
+backend/dataset/
+backend/runs/
+backend/uploads/
+backend/.ultralytics/
+**/__pycache__/
+*.pyc
+yolov8*.pt
+!backend/weights/cattle_pose_best.pt
+
+# Python & ML artifacts
+backend/.venv/
+backend/dataset/
+backend/runs/
+backend/uploads/
+backend/.ultralytics/
+**/__pycache__/
+*.pyc
+yolov8*.pt
+!backend/weights/cattle_pose_best.pt
